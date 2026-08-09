@@ -85,10 +85,10 @@ TOTAL AMOUNT     : ₹{total_price:.2f}
 
 
     # Display receipt
-    st.text(receipt)
+st.text(receipt)
 
     # Download receipt
-    st.download_button(
+st.download_button(
         label="🖨️ Print Receipt",
         data=receipt,
         file_name=f"{name}_receipt.txt",
