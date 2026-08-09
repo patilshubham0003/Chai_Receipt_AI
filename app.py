@@ -58,7 +58,7 @@ if st.button("Calculate"):
         quote = interaction.output_text
 
     except Exception:
-        quote = f"Enjoy your chai and have a wonderful day!{name}"
+        quote = f"Enjoy your chai and have a wonderful day! {name}"
 
 
 
