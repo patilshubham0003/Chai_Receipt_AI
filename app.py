@@ -58,21 +58,31 @@ if st.button("Calculate"):
         quote = interaction.output_text
 
     except Exception:
-        quote = "Enjoy your chai and have a wonderful day!"
+        quote = f"Enjoy your chai and have a wonderful day!{name}"
 
-    receipt = f"""
+
+
+receipt = f"""
+============================================================
+                     CHAI RECEIPT
+============================================================
+
 Total Cups       : {cups}
 Price per Cup    : ₹{price:.2f}
+
+------------------------------------------------------------
 GST Included     : ₹{gst_amount:.2f}
+------------------------------------------------------------
 
----
+TOTAL AMOUNT     : ₹{total_price:.2f}
 
-Total Price      : ₹{total_price:.2f}
+------------------------------------------------------------
 
-{quote}
+"{quote}"
 
-==============================================================
+============================================================
 """
+
 
     # Display receipt
     st.text(receipt)
