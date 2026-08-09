@@ -1,6 +1,6 @@
 import streamlit as st
 from google import genai
-from google.genai import errors
+
 
 st.set_page_config(
     page_title="Chai Calculator",
@@ -57,7 +57,7 @@ if st.button("Calculate"):
 
         quote = interaction.output_text
 
-    except errors.APIError:
+    except Exception:
         quote = "Enjoy your chai and have a wonderful day!"
 
     receipt = f"""
